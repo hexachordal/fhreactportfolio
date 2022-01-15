@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap')
+
+*
+  padding: 0
+  margin: 0
+
+body
+  height: 100%
+  width: 100%
+  font-family: 'Ubuntu', sans-serif
+  background: black
+  background-size: no-repeat
+  color: rgb(230,230,230)
+  animation: change 1s infinite
+  animation-play-state: paused
+  animation-delay: calc(var(--scroll) * -1s)
+
+  animation-iteration-count: 1
+  animation-fill-mode: both
+
+@keyframes change
+  0%
+    background: black
+
+  23%
+    background: #745669
+
+  57%
+    background: #d0605e
+
+  72%
+    background: #fba55a
+
+  96%
+    background: #b5d6e0
+
+  100%
+    background: #b5d6e0
+
+#navbar
+  font-size: 25px
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  display: flex
+  flex-direction: row
+  background-color: black
+  justify-content: flex-end
+  z-index: 1
+
+nav a, .project-tile a
+  text-decoration: none
+  color: rgb(230,230,230)
+  padding-left: 25px
+  padding-right: 5px
+  padding-top: 10px
+  padding-bottom: 15px
+
+nav a:hover, #project-tile:hover
+  animation: nav-ani 100s
+  position: relative
+  z-index: -1
+
+@keyframes nav-ani
+  0%
+    color: rgb(230,230,230)
+    position: relative
+    top: 0px
+    z-index: -1
+
+  0.4% 
+    color: rgba(255, 82, 82,1.0)
+    position: relative
+    top: 10px
+    z-index: -1
+
+  0.7% 
+    position: relative
+    top: 7px
+    z-index: -1
+
+  1%
+    position: relative
+    top: 10px
+    z-index: -1
+
+  100%
+    color: rgba(255, 82, 82,1.0)
+    position: relative
+    top: 10px
+    z-index: -1
+
+#welcome-section
+  font-size: 40px
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  width: 100%
+  height: 100vh
+
+#projects
+  position: relative
+  display: flex
+  flex-direction: column
+  height: auto
+  /*background-color: rgba(179, 57, 57,1.0);*/
+  z-index: 0
+
+h5
+  text-align: center
+  font-size: 30px
+  align-self: center
+  padding-bottom: 30px
+
+#project-items
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  justify-content: center
+  row-gap: 10px
+
+a h6
+  font-size: 25px
+  text-align: center
+  background-color: rgb(38, 38, 38)
+  max-width: 400px
+  position: relative
+  left: 25px
+  z-index: -1
+
+img
+  position: relative
+  max-width: 400px
+  height: auto
+  z-index: -1
+
+#contact
+  font-size: 40px
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  width: 100%
+  height: 100vh
+  color: white
+
+
+  &-links
+    display: flex
+    flex-direction: row
+    column-gap: 50px
+    color: white
+
+section div a
+  text-decoration: none
+  color: rgb(230,230,230)
+  padding-left: 0
+  padding-right: 0
+  padding-top: 0
+  padding-bottom: 0
+  position: relative
+  z-index: 1
+
+section div a:hover
+  animation: contact-ani 100s
+  position: relative
+  z-index: 1
+
+@keyframes contact-ani
+  0%
+
+    position: relative
+    top: 0px
+
+  0.4% 
+
+    position: relative
+    top: 10px
+
+  0.7% 
+    position: relative
+    top: 7px
+
+  1%
+    position: relative
+    top: 10px
+
+  100%
+
+    position: relative
+    top: 10px
+
+@media (max-width: 880px)
+  img
+    max-width: 600px
+
+  a h6
+    font-size: 25px
+    text-align: center
+    background-color: rgb(38, 38, 38)
+    max-width: 600px
+    position: relative
+    left: 25px
+    z-index: -1
+
+@media (max-width: 650px)
+  #welcome-section, #contact
+    font-size: 30px
+
+  img
+    max-width: 400px
+
+  a h6
+    font-size: 25px
+    text-align: center
+    background-color: rgb(38, 38, 38)
+    max-width: 400px
+    position: relative
+    left: 25px
+    z-index: -1
+
+@media (max-width: 450px)
+  #welcome-section, #contact
+    font-size: 20px
+
+  img
+    max-width: 300px
+
+  a h6
+    font-size: 25px
+    text-align: center
+    background-color: rgb(38, 38, 38)
+    max-width: 300px
+    position: relative
+    left: 25px
+    z-index: -1
+
+.star
+  position: fixed
+  background: white
+  box-shadow: 0px 0px 10px 5px #888888
+  height: 3px
+  width: 3px
+  border-radius: 50%
+  animation: twinkle 2s infinite
+  z-index: -1
+
+
+@keyframes twinkle
+  0%
+
+    height: 3px
+    width: 3px
+
+  6%
+
+    height: 4px
+    width: 4px
+
+  12%
+    height: 5px
+    width: 5px
+
+  18%
+    height: 6px
+    width: 6px
+
+  23%
+
+    height: 7px
+    width: 7px
+
+  28%
+
+    height: 8px
+    width: 8px
+
+  31%
+
+    height: 7px
+    width: 7px
+
+  35%
+
+    height: 6px
+    width: 6px
+
+  38%
+
+    height: 5px
+    width: 5px
+
+  41%
+
+    height: 4px
+    width: 4px
+
+  50%
+
+    height: 3px
+    width: 3px
+
+  100%
+
+    height: 3px
+    width: 3px
+
+
+#sOne
+  top: 150px
+  left: 50px
+
+#sTwo
+  top: 250px
+  right: 250px
+  animation-delay: 500ms
+
+#sThree
+  top: 150px
+  right: 50px
+  animation-delay: 1000ms
+
+#sFour
+  bottom: 250px
+  left: 250px
+  animation-delay: 1500ms
+
+#sFive
+  bottom: 100px
+  left: 350px
+  animation-delay: 2000ms
+
+#sSix
+  top: 100px
+  right: 350px
+  animation-delay: 1700ms
+
+#sSeven
+  bottom: 50px
+  right: 300px
+  animation-delay: 250ms
+
+
+  #sOne, #sTwo, #sThree, #sFour, #sFive, #sSix, &
+    animation: starAway 1s infinite
+    animation-play-state: paused
+    animation-delay: calc(var(--scroll) * -1s)
+
+    animation-iteration-count: 1
+    animation-fill-mode: both
+
+@keyframes starAway
+  0%
+    background: white
+
+  100%
+    background: transparent
+    box-shadow: 0px 0px 0px 0px white
+
+#contact a
+  color: white
+
+.cloud
+  position: fixed
+  background: whitesmoke
+  height: 60px
+  width: 90px
+  border-radius: 50%
+
+#cOne
+  top: 150px
+  right: 100px
+
+#cTwo
+  top: 130px
+  right: 60px
+
+#cThree
+  top: 150px
+  right: 30px
+
+#cFour
+  bottom: 150px
+  left: 100px
+
+#cFive
+  bottom: 170px
+  left: 60px
+
+#cSix
+  bottom: 150px
+  left: 30px
+
+#cSeven
+  bottom: 80px
+  right: 400px
+
+#cEight
+  bottom: 100px
+  right: 360px
+
+#cNine
+  bottom: 80px
+  right: 330px
+
+
+  #cOne, #cTwo, #cThree, #cFour, #cFive, #cSix, #cSeven, #cEight, &
+    animation: cloudCome 1s infinite
+    animation-play-state: paused
+    animation-delay: calc(var(--scroll) * -1s)
+
+    animation-iteration-count: 1
+    animation-fill-mode: both
+
+@keyframes cloudCome
+  0%
+    background: transparent
+
+  90%
+    background: transparent
+
+  100%
+    background: white

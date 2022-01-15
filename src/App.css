@@ -1,183 +1,279 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
-
-*{
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+* {
   padding: 0;
   margin: 0;
 }
 
-body{
+body {
   height: 100%;
   width: 100%;
   font-family: 'Ubuntu', sans-serif;
   background: black;
   background-size: no-repeat;
-  color: rgb(230,230,230);
-  animation: change 1s  infinite;
-  animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -1s);
-
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
+  color: #e6e6e6;
+  -webkit-animation: change 1s infinite;
+          animation: change 1s infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: calc(var(--scroll) * -1s);
+          animation-delay: calc(var(--scroll) * -1s);
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
-@keyframes change{
-  0%{
+@-webkit-keyframes change {
+  0% {
     background: black;
   }
-  23%{
-    background:#745669;
+  23% {
+    background: #745669;
   }
-  57%{
+  57% {
     background: #d0605e;
   }
-  72%{
+  72% {
     background: #fba55a;
   }
-  96%{
+  96% {
     background: #b5d6e0;
   }
-  100%{
+  100% {
     background: #b5d6e0;
   }
-  
 }
 
-#navbar{
+@keyframes change {
+  0% {
+    background: black;
+  }
+  23% {
+    background: #745669;
+  }
+  57% {
+    background: #d0605e;
+  }
+  72% {
+    background: #fba55a;
+  }
+  96% {
+    background: #b5d6e0;
+  }
+  100% {
+    background: #b5d6e0;
+  }
+}
+
+#navbar {
   font-size: 25px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   background-color: black;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   z-index: 1;
 }
 
-nav a, .project-tile a{
+nav a, .project-tile a {
   text-decoration: none;
-  color: rgb(230,230,230);
+  color: #e6e6e6;
   padding-left: 25px;
   padding-right: 5px;
   padding-top: 10px;
   padding-bottom: 15px;
- 
 }
 
-nav a:hover, #project-tile:hover{
-  animation: nav-ani 100s;
-  position:relative;
+nav a:hover, #project-tile:hover {
+  -webkit-animation: nav-ani 100s;
+          animation: nav-ani 100s;
+  position: relative;
   z-index: -1;
 }
 
-@keyframes nav-ani{
+@-webkit-keyframes nav-ani {
   0% {
-    color: rgb(230,230,230);
+    color: #e6e6e6;
     position: relative;
     top: 0px;
-    z-index:-1;
+    z-index: -1;
   }
   0.4% {
-    color: rgba(255, 82, 82,1.0);
+    color: #ff5252;
     position: relative;
     top: 10px;
-    z-index:-1;
+    z-index: -1;
   }
   0.7% {
     position: relative;
     top: 7px;
-    z-index:-1;
+    z-index: -1;
   }
   1% {
     position: relative;
     top: 10px;
-    z-index:-1;
+    z-index: -1;
   }
   100% {
-    color: rgba(255, 82, 82,1.0);
+    color: #ff5252;
     position: relative;
     top: 10px;
-    z-index:-1;
+    z-index: -1;
   }
 }
-  
+
+@keyframes nav-ani {
+  0% {
+    color: #e6e6e6;
+    position: relative;
+    top: 0px;
+    z-index: -1;
+  }
+  0.4% {
+    color: #ff5252;
+    position: relative;
+    top: 10px;
+    z-index: -1;
+  }
+  0.7% {
+    position: relative;
+    top: 7px;
+    z-index: -1;
+  }
+  1% {
+    position: relative;
+    top: 10px;
+    z-index: -1;
+  }
+  100% {
+    color: #ff5252;
+    position: relative;
+    top: 10px;
+    z-index: -1;
+  }
+}
+
 #welcome-section {
   font-size: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   height: 100vh;
 }
 
-#projects{
+#projects {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: auto;
   /*background-color: rgba(179, 57, 57,1.0);*/
   z-index: 0;
-  
 }
 
-h5{
+h5 {
   text-align: center;
   font-size: 30px;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   padding-bottom: 30px;
-  
 }
 
-#project-items{
+#project-items {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   row-gap: 10px;
 }
 
-a h6{
+a h6 {
   font-size: 25px;
   text-align: center;
-  background-color: rgb(38, 38, 38);
+  background-color: #262626;
   max-width: 400px;
   position: relative;
   left: 25px;
-  z-index:-1;
+  z-index: -1;
 }
 
-img{
+img {
   position: relative;
   max-width: 400px;
   height: auto;
-  z-index:-1;
+  z-index: -1;
 }
-
 
 #contact {
   font-size: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   height: 100vh;
   color: white;
 }
 
-#contact-links{
-  display:flex;
-  flex-direction: row;
-  column-gap: 50px;
+#contact-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-column-gap: 50px;
+          column-gap: 50px;
   color: white;
 }
 
 section div a {
   text-decoration: none;
-  color: rgb(230,230,230);
+  color: #e6e6e6;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
@@ -186,244 +282,312 @@ section div a {
   z-index: 1;
 }
 
-section div a:hover{
-  animation: contact-ani 100s;
+section div a:hover {
+  -webkit-animation: contact-ani 100s;
+          animation: contact-ani 100s;
   position: relative;
   z-index: 1;
 }
 
-@keyframes contact-ani{
+@-webkit-keyframes contact-ani {
   0% {
-    
     position: relative;
     top: 0px;
-    
   }
   0.4% {
-    
     position: relative;
     top: 10px;
-    
   }
   0.7% {
     position: relative;
     top: 7px;
-    
   }
   1% {
     position: relative;
     top: 10px;
-    
   }
   100% {
-    
     position: relative;
     top: 10px;
-    
   }
 }
 
-@media (max-width: 880px){
-  img{
+@keyframes contact-ani {
+  0% {
+    position: relative;
+    top: 0px;
+  }
+  0.4% {
+    position: relative;
+    top: 10px;
+  }
+  0.7% {
+    position: relative;
+    top: 7px;
+  }
+  1% {
+    position: relative;
+    top: 10px;
+  }
+  100% {
+    position: relative;
+    top: 10px;
+  }
+}
+
+@media (max-width: 880px) {
+  img {
     max-width: 600px;
   }
-  a h6{
-  font-size: 25px;
-  text-align: center;
-  background-color: rgb(38, 38, 38);
-  max-width: 600px;
-  position: relative;
-  left: 25px;
-  z-index:-1;
-}
+  a h6 {
+    font-size: 25px;
+    text-align: center;
+    background-color: #262626;
+    max-width: 600px;
+    position: relative;
+    left: 25px;
+    z-index: -1;
+  }
 }
 
-@media (max-width: 650px){
-  #welcome-section, #contact{
+@media (max-width: 650px) {
+  #welcome-section, #contact {
     font-size: 30px;
   }
-  img{
+  img {
     max-width: 400px;
   }
-  a h6{
-  font-size: 25px;
-  text-align: center;
-  background-color: rgb(38, 38, 38);
-  max-width: 400px;
-  position: relative;
-  left: 25px;
-  z-index:-1;
-}
+  a h6 {
+    font-size: 25px;
+    text-align: center;
+    background-color: #262626;
+    max-width: 400px;
+    position: relative;
+    left: 25px;
+    z-index: -1;
+  }
 }
 
-@media (max-width: 450px){
-  #welcome-section, #contact{
+@media (max-width: 450px) {
+  #welcome-section, #contact {
     font-size: 20px;
   }
-  img{
+  img {
     max-width: 300px;
   }
-  a h6{
-  font-size: 25px;
-  text-align: center;
-  background-color: rgb(38, 38, 38);
-  max-width: 300px;
-  position: relative;
-  left: 25px;
-  z-index:-1;
-}
+  a h6 {
+    font-size: 25px;
+    text-align: center;
+    background-color: #262626;
+    max-width: 300px;
+    position: relative;
+    left: 25px;
+    z-index: -1;
+  }
 }
 
-.star{
+.star {
   position: fixed;
   background: white;
-  box-shadow: 0px 0px 10px 5px #888888;
+  -webkit-box-shadow: 0px 0px 10px 5px #888888;
+          box-shadow: 0px 0px 10px 5px #888888;
   height: 3px;
   width: 3px;
   border-radius: 50%;
-  animation: twinkle 2s infinite;
+  -webkit-animation: twinkle 2s infinite;
+          animation: twinkle 2s infinite;
   z-index: -1;
 }
 
-/*
-@keyframes twinkle{
+@-webkit-keyframes twinkle {
   0% {
-    
     height: 3px;
-  width: 3px;
-    
+    width: 3px;
   }
   6% {
-    
     height: 4px;
-  width: 4px;
-    
+    width: 4px;
   }
   12% {
     height: 5px;
-  width: 5px;
-    
+    width: 5px;
   }
   18% {
     height: 6px;
-  width: 6px;
-    
+    width: 6px;
   }
   23% {
-    
     height: 7px;
-  width: 7px;
-    
+    width: 7px;
   }
   28% {
-    
     height: 8px;
-  width: 8px;
-    
+    width: 8px;
   }
   31% {
-    
     height: 7px;
-  width: 7px;
-    
+    width: 7px;
   }
   35% {
-    
     height: 6px;
-  width: 6px;
-    
+    width: 6px;
   }
   38% {
-    
     height: 5px;
-  width: 5px;
-    
+    width: 5px;
   }
   41% {
-    
     height: 4px;
-  width: 4px;
-    
+    width: 4px;
   }
   50% {
-    
     height: 3px;
-  width: 3px;
-    
+    width: 3px;
   }
   100% {
-    
     height: 3px;
-  width: 3px;
-    
+    width: 3px;
   }
 }
-*/
-#sOne{
+
+@keyframes twinkle {
+  0% {
+    height: 3px;
+    width: 3px;
+  }
+  6% {
+    height: 4px;
+    width: 4px;
+  }
+  12% {
+    height: 5px;
+    width: 5px;
+  }
+  18% {
+    height: 6px;
+    width: 6px;
+  }
+  23% {
+    height: 7px;
+    width: 7px;
+  }
+  28% {
+    height: 8px;
+    width: 8px;
+  }
+  31% {
+    height: 7px;
+    width: 7px;
+  }
+  35% {
+    height: 6px;
+    width: 6px;
+  }
+  38% {
+    height: 5px;
+    width: 5px;
+  }
+  41% {
+    height: 4px;
+    width: 4px;
+  }
+  50% {
+    height: 3px;
+    width: 3px;
+  }
+  100% {
+    height: 3px;
+    width: 3px;
+  }
+}
+
+#sOne {
   top: 150px;
   left: 50px;
 }
 
-
-
-#sTwo{
+#sTwo {
   top: 250px;
   right: 250px;
-  animation-delay: 500ms;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
 }
 
-#sThree{
+#sThree {
   top: 150px;
   right: 50px;
-  animation-delay: 1000ms;
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
 }
 
-
-#sFour{
+#sFour {
   bottom: 250px;
   left: 250px;
-  animation-delay: 1500ms;
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
 }
-#sFive{
+
+#sFive {
   bottom: 100px;
   left: 350px;
-  animation-delay: 2000ms;
+  -webkit-animation-delay: 2000ms;
+          animation-delay: 2000ms;
 }
-#sSix{
+
+#sSix {
   top: 100px;
   right: 350px;
-  animation-delay: 1700ms;
+  -webkit-animation-delay: 1700ms;
+          animation-delay: 1700ms;
 }
-#sSeven{
+
+#sSeven {
   bottom: 50px;
   right: 300px;
-  animation-delay: 250ms;
+  -webkit-animation-delay: 250ms;
+          animation-delay: 250ms;
 }
 
-#sOne, #sTwo, #sThree, #sFour, #sFive, #sSix, #sSeven{
-  animation: starAway 1s  infinite;
-  animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -1s);
-
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
+#sSeven #sOne, #sSeven #sTwo, #sSeven #sThree, #sSeven #sFour, #sSeven #sFive, #sSeven #sSix, #sSeven {
+  -webkit-animation: starAway 1s infinite;
+          animation: starAway 1s infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: calc(var(--scroll) * -1s);
+          animation-delay: calc(var(--scroll) * -1s);
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
-@keyframes starAway{
-  0%{
+@-webkit-keyframes starAway {
+  0% {
     background: white;
   }
-  100%{
+  100% {
     background: transparent;
-    box-shadow: 0px 0px 0px 0px white;
+    -webkit-box-shadow: 0px 0px 0px 0px white;
+            box-shadow: 0px 0px 0px 0px white;
   }
-} 
+}
 
-#contact a{
+@keyframes starAway {
+  0% {
+    background: white;
+  }
+  100% {
+    background: transparent;
+    -webkit-box-shadow: 0px 0px 0px 0px white;
+            box-shadow: 0px 0px 0px 0px white;
+  }
+}
+
+#contact a {
   color: white;
 }
 
-.cloud{
+.cloud {
   position: fixed;
   background: whitesmoke;
   height: 60px;
@@ -431,69 +595,85 @@ section div a:hover{
   border-radius: 50%;
 }
 
-#cOne{
+#cOne {
   top: 150px;
   right: 100px;
 }
 
-#cTwo{
+#cTwo {
   top: 130px;
   right: 60px;
 }
 
-#cThree{
+#cThree {
   top: 150px;
   right: 30px;
 }
 
-#cFour{
+#cFour {
   bottom: 150px;
   left: 100px;
 }
 
-#cFive{
+#cFive {
   bottom: 170px;
   left: 60px;
 }
 
-#cSix{
+#cSix {
   bottom: 150px;
   left: 30px;
 }
 
-#cSeven{
+#cSeven {
   bottom: 80px;
   right: 400px;
 }
 
-#cEight{
+#cEight {
   bottom: 100px;
   right: 360px;
 }
 
-#cNine{
+#cNine {
   bottom: 80px;
   right: 330px;
 }
 
-#cOne, #cTwo, #cThree, #cFour, #cFive, #cSix, #cSeven, #cEight, #cNine{
-  animation: cloudCome 1s  infinite;
-  animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -1s);
-
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
+#cNine #cOne, #cNine #cTwo, #cNine #cThree, #cNine #cFour, #cNine #cFive, #cNine #cSix, #cNine #cSeven, #cNine #cEight, #cNine {
+  -webkit-animation: cloudCome 1s infinite;
+          animation: cloudCome 1s infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: calc(var(--scroll) * -1s);
+          animation-delay: calc(var(--scroll) * -1s);
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
-@keyframes cloudCome{
-  0%{
+@-webkit-keyframes cloudCome {
+  0% {
     background: transparent;
   }
-  90%{
+  90% {
     background: transparent;
   }
-  100%{
+  100% {
     background: white;
-    
   }
-} 
+}
+
+@keyframes cloudCome {
+  0% {
+    background: transparent;
+  }
+  90% {
+    background: transparent;
+  }
+  100% {
+    background: white;
+  }
+}
+/*# sourceMappingURL=App.css.map */
