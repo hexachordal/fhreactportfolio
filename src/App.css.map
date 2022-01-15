@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,CAAC,CAAC;EACE,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CAAG",
+    "mappings": "AAAA,AAAA,CAAC,CAAC;EACE,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CAGsB;;AALpC,AAII,CAJH,CAIG,IAAI,CAAC;EACD,gBAAgB,EAAE,KAAK;CAAG",
     "sources": [
         "App.sass"
     ],
